@@ -26,7 +26,7 @@ int main(){
 	printf("So phan tu: \n");
 	scanf("%d",&n);
 	int Arr[n];
-	printf("Nhap tung phan tu:");
+	printf("Nhap tung phan tu:\n");
 	for(int i=0; i<n; i++)
 	{
 		scanf("%d",&Arr[i]);
