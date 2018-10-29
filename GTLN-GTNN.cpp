@@ -1,5 +1,25 @@
 #include<stdio.h>
 #include<conio.h>
+	//GTLN
+int Max(int Arr[50], int n)
+{
+		int max=Arr[0];
+			for(int i=0; i<n; i++){
+					if(max<Arr[i])
+					max=Arr[i];
+				}
+		return max;
+}
+	//GTNN
+int Min(int Arr[50], int n)
+{
+	int min=Arr[0];
+			for(int i=0; i<n; i++){
+					if(min>Arr[i])
+					min=Arr[i];
+				}
+		return min;
+}
 int main(){
 		int n;
 		int max, min;
@@ -12,22 +32,8 @@ int main(){
 				scanf("%d",&so[i]);
 				printf("",so[i]);	
 			}
-	//GTLN			
-			max=so[0];
-			for(int i=0; i<n-1; i++){
-				for(int j=1; j<n; j++){
-					if(so[i]<so[j])
-					max=so[j];
-				}
-			}
-			printf("GTLN la: %d", max);
-	//GTNN
-			min=so[0];
-			for(int i=0; i<n-1; i++){
-				for(int j=1; j<n; j++){
-					if(so[i]>so[j])
-					min=so[j];
-				}
-			}
-			printf("\nGTNN la: %d", min);
+			
+			printf("GTLN la: %d", Max(so,n));
+
+			printf("\nGTNN la: %d", Min(so, n));
 }
